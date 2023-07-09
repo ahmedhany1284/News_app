@@ -30,10 +30,14 @@ class MyApp extends StatelessWidget {
 
   final bool isDark;
   Widget build(BuildContext context) {
-    return BlocProvider(
-      create: (BuildContext context) =>AppCubit()..changeAppMode(
-        fromshard: isDark,
-      ),
+    return MultiBlocProvider(
+      providers:
+      [
+        BlocProvider(create: (context) => NewsCubit()..getBusiness()..getSports()..getScience()),
+        BlocProvider(create: (BuildContext context) =>AppCubit()..changeAppMode(
+          fromshard: isDark,
+        ),),
+      ],
       child: BlocConsumer<AppCubit,AppStates>(
         listener: (context,state){},
         builder: (context,state){

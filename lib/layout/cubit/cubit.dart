@@ -3,7 +3,6 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:news_layout/modules/business/business_screen.dart';
 import 'package:news_layout/modules/science/science_screen.dart';
-import 'package:news_layout/modules/settings/settings_screen.dart';
 import 'package:news_layout/modules/sports/sports_screen.dart';
 import 'package:news_layout/network/remote/dio_helper.dart';
 
@@ -68,9 +67,9 @@ class NewsCubit extends Cubit<NewsStates>
       url: 'v2/top-headlines',
       query:
       {
-        'country':'eg',
+        'country':'us',
         'category':'business',
-        'apiKey':'65f7f556ec76449fa7dc7c0069f040ca',
+        'apiKey':'e95f7f1af3cd4111b882c59cccce7c50',
       },
     ).then((value)
     {
@@ -97,9 +96,9 @@ class NewsCubit extends Cubit<NewsStates>
         url: 'v2/top-headlines',
         query:
         {
-          'country':'eg',
+          'country':'us',
           'category':'sports',
-          'apiKey':'65f7f556ec76449fa7dc7c0069f040ca',
+          'apiKey':'e95f7f1af3cd4111b882c59cccce7c50',
         },
       ).then((value)
       {
@@ -131,9 +130,9 @@ class NewsCubit extends Cubit<NewsStates>
         url: 'v2/top-headlines',
         query:
         {
-          'country':'eg',
+          'country':'us',
           'category':'science',
-          'apiKey':'65f7f556ec76449fa7dc7c0069f040ca',
+          'apiKey':'e95f7f1af3cd4111b882c59cccce7c50',
         },
       ).then((value)
       {
@@ -163,7 +162,7 @@ class NewsCubit extends Cubit<NewsStates>
       query:
       {
         'q':'$value',
-        'apiKey':'65f7f556ec76449fa7dc7c0069f040ca',
+        'apiKey':'e95f7f1af3cd4111b882c59cccce7c50',
       },
     ).then((value)
     {
