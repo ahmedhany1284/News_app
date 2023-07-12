@@ -8,6 +8,7 @@ import 'package:news_layout/shared/components/components.dart';
 import 'package:news_layout/shared/cubit/cubit.dart';
 
 bool isdark=false;
+bool is_eg=false;
 class NewLayout extends StatelessWidget {
   const NewLayout({Key? key}) : super(key: key);
   @override
@@ -26,7 +27,7 @@ class NewLayout extends StatelessWidget {
           actions: [
             IconButton(
                 onPressed: (){
-                  navigateto(context, SearchScreen(), );
+                  navigateTo(context, SearchScreen(), );
                 },
                 icon:Icon(Icons.search),
             ),
@@ -35,7 +36,6 @@ class NewLayout extends StatelessWidget {
                 onPressed: (){
                   AppCubit.get(context).changeAppMode();
                 },
-
             ),
           ],
         ),

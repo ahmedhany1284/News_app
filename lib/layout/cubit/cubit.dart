@@ -4,13 +4,17 @@ import 'package:flutter/material.dart';
 import 'package:news_layout/modules/business/business_screen.dart';
 import 'package:news_layout/modules/science/science_screen.dart';
 import 'package:news_layout/modules/sports/sports_screen.dart';
+import 'package:news_layout/network/local/cacheHelper.dart';
 import 'package:news_layout/network/remote/dio_helper.dart';
 
 
 class NewsCubit extends Cubit<NewsStates>
 {
   NewsCubit():super(NewsInitialState());
+
+  static get context => null;
   static NewsCubit get(context)=>BlocProvider.of(context);
+
 
 
   int cur_ind=0;
@@ -67,7 +71,7 @@ class NewsCubit extends Cubit<NewsStates>
       url: 'v2/top-headlines',
       query:
       {
-        'country':'us',
+        'country':'US',
         'category':'business',
         'apiKey':'e95f7f1af3cd4111b882c59cccce7c50',
       },
@@ -96,7 +100,7 @@ class NewsCubit extends Cubit<NewsStates>
         url: 'v2/top-headlines',
         query:
         {
-          'country':'us',
+          'country':'US',
           'category':'sports',
           'apiKey':'e95f7f1af3cd4111b882c59cccce7c50',
         },
@@ -130,7 +134,7 @@ class NewsCubit extends Cubit<NewsStates>
         url: 'v2/top-headlines',
         query:
         {
-          'country':'us',
+          'country':'US',
           'category':'science',
           'apiKey':'e95f7f1af3cd4111b882c59cccce7c50',
         },
