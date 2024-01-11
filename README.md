@@ -1,16 +1,7 @@
 # news_layout
 
-A new Flutter project.
-
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- Implements BLoC integration with Flutter using the Flutter Bloc package.
+- Performs network requests and handles API interactions using the Dio package.
+- Utilizes the Shared Preferences package for persistent storage of user preferences.
+- Supports web content integration with the WebView Flutter package for displaying
+web-based news articles within the app.
