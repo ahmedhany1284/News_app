@@ -1,4 +1,4 @@
-# news_layout
+# News App
 
 - Implements BLoC integration with Flutter using the Flutter Bloc package.
 - Performs network requests and handles API interactions using the Dio package.
